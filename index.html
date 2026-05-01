@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sibai Advisory | Cybersecurity Governance & Program Management Advisory | Mississauga, Ontario</title>
+<meta name="description" content="Founder-led cybersecurity governance and program management advisory for regulated organizations. SOC 2 readiness, cybersecurity program delivery, and enterprise architecture led by Mamoun Sibai, P.Eng., MBA, MSc (Wireless Communications), CC (ISC)².">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #080d1a;
+    --navy2: #0d1526;
+    --navy3: #162034;
+    --navy4: #1a2840;
+    --gold: #c9a84c;
+    --gold-light: #e8c97a;
+    --gold-dim: rgba(201,168,76,0.15);
+    --steel: #7a8fa8;
+    --steel2: #9fb3c8;
+    --light: #dce6f0;
+    --white: #f0f5ff;
+    --accent: #3d8fc4;
+    --border: rgba(201,168,76,0.12);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--navy);
+    color: var(--light);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 1.1rem 5rem;
+    display: flex; justify-content: space-between; align-items: center;
+    background: rgba(8,13,26,0.95);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(8px);
+  }
+  .nav-logo {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 600; font-size: 1rem; letter-spacing: 0.2em;
+    color: var(--white); text-decoration: none; text-transform: uppercase;
+  }
+  .nav-logo span { color: var(--gold); }
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a {
+    color: var(--steel); text-decoration: none; font-size: 0.8rem;
+    letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500;
+    transition: color 0.3s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex; align-items: center;
+    padding: 8rem 5rem 5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 70% 40%, rgba(61,143,196,0.04) 0%, transparent 60%),
+      radial-gradient(ellipse 40% 40% at 20% 80%, rgba(201,168,76,0.03) 0%, transparent 50%);
+  }
+  .hero-grid {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(201,168,76,0.012) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(201,168,76,0.012) 1px, transparent 1px);
+    background-size: 80px 80px;
+  }
+  .hero-content { position: relative; max-width: 780px; }
+  .hero-eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.72rem; letter-spacing: 0.25em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 2rem;
+    display: flex; align-items: center; gap: 1.2rem;
+  }
+  .hero-eyebrow::before {
+    content: ''; display: block;
+    width: 48px; height: 1px; background: var(--gold);
+  }
+  h1.hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    font-weight: 300; line-height: 1.1;
+    color: var(--white); margin-bottom: 1.2rem;
+    letter-spacing: -0.01em;
+  }
+  h1.hero-title em { color: var(--gold); font-style: normal; }
+  .hero-sub {
+    font-size: 1rem; color: var(--steel2);
+    max-width: 520px; margin-bottom: 3rem; line-height: 1.85;
+    font-weight: 300;
+  }
+  .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    padding: 0.85rem 2rem;
+    border: 1px solid var(--gold);
+    color: var(--gold); text-decoration: none;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase;
+    transition: all 0.25s;
+  }
+  .btn-primary:hover { background: var(--gold); color: var(--navy); }
+  .btn-secondary {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    padding: 0.85rem 2rem;
+    border: 1px solid rgba(122,143,168,0.35);
+    color: var(--steel2); text-decoration: none;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase;
+    transition: all 0.25s;
+  }
+  .btn-secondary:hover { border-color: var(--steel2); color: var(--light); }
+  .hero-creds {
+    position: absolute; right: 5rem; bottom: 4rem;
+    display: flex; flex-direction: column; gap: 0.5rem; align-items: flex-end;
+  }
+  .cred-pill {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.68rem; letter-spacing: 0.08em;
+    color: var(--steel); border: 1px solid rgba(122,143,168,0.2);
+    padding: 0.22rem 0.8rem; background: rgba(8,13,26,0.6);
+  }
+
+  /* BRANDS BAR */
+  .brands {
+    background: var(--navy2);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 1.5rem 5rem;
+  }
+  .brands-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; align-items: center; gap: 3rem; flex-wrap: wrap;
+  }
+  .brands-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase;
+    color: rgba(122,143,168,0.6); flex-shrink: 0; white-space: nowrap;
+  }
+  .brand-list { display: flex; gap: 2.5rem; flex-wrap: wrap; }
+  .brand-name {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.82rem; font-weight: 600; letter-spacing: 0.15em;
+    text-transform: uppercase; color: rgba(122,143,168,0.45);
+    white-space: nowrap; transition: color 0.3s;
+  }
+  .brand-name:hover { color: var(--steel2); }
+
+  /* SECTIONS */
+  section { padding: 6rem 5rem; }
+  .section-inner { max-width: 1200px; margin: 0 auto; }
+  .section-eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.68rem; letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 1.2rem;
+    display: flex; align-items: center; gap: 1rem;
+  }
+  .section-eyebrow::before {
+    content: ''; width: 32px; height: 1px; background: var(--gold);
+  }
+  h2.section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 300; color: var(--white); line-height: 1.25;
+    margin-bottom: 1.5rem; letter-spacing: -0.01em;
+  }
+  h2.section-title em { color: var(--gold); font-style: normal; }
+
+  /* ABOUT */
+  .about { background: var(--navy2); }
+  .about-grid {
+    display: grid; grid-template-columns: 1.1fr 0.9fr;
+    gap: 6rem; align-items: start;
+  }
+  .about-text p { color: var(--steel2); margin-bottom: 1.4rem; font-size: 0.97rem; line-height: 1.85; }
+  .about-text p strong { color: var(--light); font-weight: 500; }
+  .about-stats {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 1.5rem; margin-top: 2.5rem;
+  }
+  .stat { border-left: 2px solid var(--gold); padding-left: 1.2rem; }
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.4rem; color: var(--white); font-weight: 300; line-height: 1;
+  }
+  .stat-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.68rem; color: var(--steel); text-transform: uppercase;
+    letter-spacing: 0.1em; margin-top: 0.3rem;
+  }
+  .creds-panel { display: flex; flex-direction: column; gap: 0.9rem; }
+  .cred-row {
+    display: flex; align-items: flex-start; gap: 1rem;
+    padding: 1rem 1.2rem;
+    border: 1px solid var(--border);
+    background: rgba(201,168,76,0.02);
+    transition: border-color 0.3s, background 0.3s;
+  }
+  .cred-row:hover { border-color: rgba(201,168,76,0.3); background: rgba(201,168,76,0.05); }
+  .cred-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.65rem; font-weight: 500;
+    color: var(--gold); border: 1px solid rgba(201,168,76,0.3);
+    padding: 0.2rem 0.55rem; flex-shrink: 0; margin-top: 0.1rem;
+    letter-spacing: 0.06em;
+  }
+  .cred-info strong { color: var(--light); font-weight: 500; font-size: 0.9rem; display: block; margin-bottom: 0.15rem; }
+  .cred-info span { color: var(--steel); font-size: 0.82rem; }
+
+  /* SERVICES */
+  .services { background: var(--navy); }
+  .services-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    margin-top: 3rem;
+    border: 1px solid var(--border);
+  }
+  .svc {
+    padding: 2.2rem 1.8rem;
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    transition: background 0.25s;
+    position: relative;
+  }
+  .svc:nth-child(3n) { border-right: none; }
+  .svc:nth-child(4), .svc:nth-child(5), .svc:nth-child(6) { border-bottom: none; }
+  .svc:hover { background: var(--navy2); }
+  .svc-num {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.65rem; color: rgba(201,168,76,0.4);
+    letter-spacing: 0.1em; margin-bottom: 1.2rem;
+  }
+  .svc-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem; font-weight: 600;
+    color: var(--white); margin-bottom: 0.8rem; line-height: 1.3;
+  }
+  .svc-desc { font-size: 0.85rem; color: var(--steel); line-height: 1.75; }
+  .svc-tag {
+    display: inline-block; margin-top: 1.5rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--gold); border: 1px solid rgba(201,168,76,0.25);
+    padding: 0.18rem 0.55rem;
+  }
+
+  /* VISION */
+  .vision {
+    background: var(--navy3);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .vision-grid { display: grid; grid-template-columns: 1fr 1.6fr; gap: 6rem; }
+  .vision-intro p { color: var(--steel2); font-size: 0.97rem; line-height: 1.85; margin-bottom: 1.2rem; }
+  .timeline { display: flex; flex-direction: column; }
+  .tl-item { display: flex; gap: 1.5rem; }
+  .tl-spine { display: flex; flex-direction: column; align-items: center; }
+  .tl-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--gold); flex-shrink: 0; margin-top: 0.4rem; }
+  .tl-line { width: 1px; flex: 1; background: var(--border); min-height: 2.5rem; }
+  .tl-body { padding-bottom: 2.2rem; }
+  .tl-year {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.68rem; letter-spacing: 0.18em; color: var(--gold);
+    text-transform: uppercase; margin-bottom: 0.3rem;
+  }
+  .tl-head { font-weight: 500; color: var(--white); font-size: 0.92rem; margin-bottom: 0.4rem; }
+  .tl-desc { font-size: 0.83rem; color: var(--steel); line-height: 1.7; }
+
+  /* CONTACT */
+  .contact { background: var(--navy); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; }
+  .contact-intro p { color: var(--steel2); font-size: 0.97rem; line-height: 1.85; margin-bottom: 2rem; }
+  .contact-details { display: flex; flex-direction: column; gap: 1rem; margin-top: 1rem; }
+  .cd-row { display: flex; gap: 1.2rem; align-items: flex-start; }
+  .cd-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--gold); min-width: 72px; margin-top: 0.15rem; flex-shrink: 0;
+  }
+  .cd-val { color: var(--light); font-size: 0.92rem; }
+  .cd-val a { color: var(--accent); text-decoration: none; transition: color 0.25s; }
+  .cd-val a:hover { color: var(--gold); }
+  .contact-form { display: flex; flex-direction: column; gap: 1.1rem; }
+  .fl { display: flex; flex-direction: column; gap: 0.35rem; }
+  .fl label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--steel);
+  }
+  .fi, .ft {
+    background: rgba(255,255,255,0.025);
+    border: 1px solid rgba(122,143,168,0.2);
+    color: var(--light); padding: 0.7rem 0.9rem;
+    font-family: 'IBM Plex Sans', sans-serif; font-size: 0.92rem; font-weight: 300;
+    outline: none; transition: border-color 0.25s; width: 100%;
+  }
+  .fi:focus, .ft:focus { border-color: rgba(201,168,76,0.4); }
+  .ft { resize: vertical; min-height: 110px; }
+  .fsub {
+    padding: 0.85rem 2rem; cursor: pointer;
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase;
+    transition: all 0.25s; align-self: flex-start;
+  }
+  .fsub:hover { background: var(--gold); color: var(--navy); }
+
+  /* FOOTER */
+  footer {
+    background: var(--navy2);
+    border-top: 1px solid var(--border);
+    padding: 1.8rem 5rem;
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 1rem;
+  }
+  .footer-brand {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 600; font-size: 0.9rem; letter-spacing: 0.18em;
+    color: rgba(159,179,200,0.8); text-transform: uppercase;
+  }
+  .footer-brand span { color: var(--gold); }
+  .footer-tag {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.95rem; font-style: italic; color: rgba(159,179,200,0.65);
+  }
+  .footer-copy {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.65rem; color: rgba(159,179,200,0.7); letter-spacing: 0.05em;
+  }
+
+  @media (max-width: 960px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { display: none; }
+    section { padding: 4rem 1.5rem; }
+    .hero { padding: 6rem 1.5rem 3rem; }
+    .about-grid, .vision-grid, .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .services-grid { grid-template-columns: 1fr; }
+    .svc { border-right: none; }
+    .svc:nth-child(n) { border-bottom: 1px solid var(--border); }
+    .svc:last-child { border-bottom: none; }
+    .hero-creds { display: none; }
+    .brands { padding: 1.5rem; }
+    footer { flex-direction: column; text-align: center; padding: 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-logo">Sibai <span>Advisory</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#vision">Vision</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Cybersecurity Governance · Program Management · Enterprise Advisory</div>
+    <h1 class="hero-title">
+      Advisory Built on<br>
+      <em>Engineering Precision</em>
+    </h1>
+    <p class="hero-sub">
+      Founder-led cybersecurity governance and program management advisory for regulated organizations — backed by P.Eng. discipline, 20+ years of enterprise delivery, and a track record across Canada and the Middle East.
+    </p>
+    <div class="hero-actions">
+      <a href="#services" class="btn-primary">Explore Services</a>
+      <a href="#contact" class="btn-secondary">Get in Touch</a>
+    </div>
+  </div>
+  <div class="hero-creds">
+    <div class="cred-pill">P.Eng. · Professional Engineer</div>
+    <div class="cred-pill">MBA · Finance</div>
+    <div class="cred-pill">MSc · Electrical Engineering</div>
+    <div class="cred-pill">CC (ISC)² · Cybersecurity</div>
+    <div class="cred-pill">CSM · Scrum Master</div>
+    <div class="cred-pill">ITIL · Service Management</div>
+  </div>
+</section>
+
+<div class="brands">
+  <div class="brands-inner">
+    <span class="brands-label">Career Background</span>
+    <div class="brand-list">
+      <span class="brand-name">Canadian Energy Regulator</span>
+      <span class="brand-name">Bell Canada</span>
+      <span class="brand-name">Telus</span>
+      <span class="brand-name">Rogers</span>
+      <span class="brand-name">CGI</span>
+      <span class="brand-name">STC / VIVA Kuwait</span>
+    </div>
+  </div>
+</div>
+
+<section class="about" id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-text">
+        <div class="section-eyebrow">About</div>
+        <h2 class="section-title">Where <em>Governance</em><br>Meets Precision</h2>
+        <p>Sibai Advisory was founded by <strong>Mamoun Sibai</strong>, a Professional Engineer with over 20 years of enterprise delivery across telecom infrastructure, IT program management, and cybersecurity — in Canada and the Middle East.</p>
+        <p>Mamoun's primary practice is <strong>senior program and project management for complex, regulated-sector engagements</strong> — the discipline that has defined his career at Bell Canada, Telus, Rogers, CGI, and the Canadian Energy Regulator. He layers cybersecurity governance, SOC 2 readiness, and enterprise architecture advisory on that delivery foundation.</p>
+        <p>From launching Kuwait's third national mobile network in 10 months at STC/VIVA, to leading SOC transformation with PwC at Bell Canada, to governing IT programs at Canada's energy regulator — Sibai Advisory brings that same execution rigour to every client engagement.</p>
+        <div class="about-stats">
+          <div class="stat"><div class="stat-num">20+</div><div class="stat-label">Years Enterprise Delivery</div></div>
+          <div class="stat"><div class="stat-num">$100M+</div><div class="stat-label">Project Value Managed</div></div>
+          <div class="stat"><div class="stat-num">5</div><div class="stat-label">Professional Credentials</div></div>
+          <div class="stat"><div class="stat-num">CA · ME</div><div class="stat-label">Canada & Middle East</div></div>
+        </div>
+      </div>
+      <div>
+        <div class="section-eyebrow">Credentials</div>
+        <div class="creds-panel">
+          <div class="cred-row">
+            <span class="cred-tag">P.Eng</span>
+            <div class="cred-info"><strong>Professional Engineer</strong><span>Licensed engineer — engineering rigour applied to every engagement</span></div>
+          </div>
+          <div class="cred-row">
+            <span class="cred-tag">MBA</span>
+            <div class="cred-info"><strong>MBA — Finance</strong><span>Quantitative business orientation bridging technical and strategic decisions</span></div>
+          </div>
+          <div class="cred-row">
+            <span class="cred-tag">MSc</span>
+            <div class="cred-info"><strong>MSc — Electrical Engineering (Wireless Communications)</strong><span>Deep technical foundation in wireless systems, signal processing, and complex networks</span></div>
+          </div>
+          <div class="cred-row">
+            <span class="cred-tag">CC</span>
+            <div class="cred-info"><strong>CC (ISC)² — Cybersecurity</strong><span>Certified in cybersecurity principles, risk management, and governance</span></div>
+          </div>
+          <div class="cred-row">
+            <span class="cred-tag">CSM</span>
+            <div class="cred-info"><strong>CSM · ITIL · PMP (in progress)</strong><span>Agile, service management, and enterprise project delivery</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="section-inner">
+    <div class="section-eyebrow">Services</div>
+    <h2 class="section-title">What <em>Sibai Advisory</em> Delivers</h2>
+    <div class="services-grid" style="grid-template-columns: repeat(3,1fr);">
+      <div class="svc" style="border-bottom:none;">
+        <div class="svc-num">01</div>
+        <div class="svc-title">Cybersecurity Governance & Readiness</div>
+        <p class="svc-desc">SOC 2 Type I & II readiness, gap analysis, control documentation, policy drafting, risk registers, evidence repository setup, and audit preparation. Aligned to NIST CSF 2.0, ISO 27001, and COBIT 2019. Built to be defensible and audit-ready from day one.</p>
+        <span class="svc-tag">SOC 2 · ISO 27001 · NIST CSF</span>
+      </div>
+      <div class="svc" style="border-bottom:none;">
+        <div class="svc-num">02</div>
+        <div class="svc-title">Cybersecurity Program & Transformation Delivery</div>
+        <p class="svc-desc">End-to-end program management for cybersecurity transformation initiatives — SOC build-out, SIEM use-case prioritization, remediation roadmaps, vendor and SOW governance, stakeholder reporting, and executive alignment. From strategy to execution.</p>
+        <span class="svc-tag">Program Management · SOC · SIEM</span>
+      </div>
+      <div class="svc" style="border-bottom:none;">
+        <div class="svc-num">03</div>
+        <div class="svc-title">Enterprise Architecture & Complex IT Delivery</div>
+        <p class="svc-desc">Technology landscape assessment, solution design, and architecture governance for complex organizations. Network, cloud, and security architecture advisory. Senior project and program management for infrastructure, telecom, and regulated-sector IT transformations.</p>
+        <span class="svc-tag">Enterprise Architecture · IT Delivery</span>
+      </div>
+    </div>
+    <div style="margin-top:2rem; padding:1.5rem 2rem; border:1px solid var(--border); background:rgba(201,168,76,0.03);">
+      <p style="font-size:0.85rem; color:var(--steel); font-family:'IBM Plex Mono',monospace; letter-spacing:0.08em;">
+        AI Governance Advisory is offered as a specialist layer within Pillars 1 and 2 — covering NIST AI RMF alignment, AI risk frameworks, and governance policy development for organizations deploying AI in regulated environments.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--navy2); padding:4rem 5rem;" id="outcomes">
+  <div class="section-inner">
+    <div class="section-eyebrow">Selected Outcomes</div>
+    <h2 class="section-title">Enterprise <em>Impact</em> at Scale</h2>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--border); margin-top:2.5rem;">
+      <div style="background:var(--navy2); padding:1.8rem 2rem; border-bottom:1px solid var(--border);">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:0.6rem;">CANADIAN ENERGY REGULATOR · 2025–PRESENT</div>
+        <p style="color:var(--light); font-size:0.92rem; line-height:1.7;">Managing IT portal migration, bilingual localization, and sprint-based delivery workstreams using Azure DevOps in a regulated federal environment.</p>
+      </div>
+      <div style="background:var(--navy2); padding:1.8rem 2rem; border-bottom:1px solid var(--border); border-left:1px solid var(--border);">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:0.6rem;">BELL CANADA · SOC TRANSFORMATION · 2022–2024</div>
+        <p style="color:var(--light); font-size:0.92rem; line-height:1.7;">Led two SOC transformation SOWs with PwC — onboarded 100+ security specialists and threat hunters with full RBAC and access governance controls.</p>
+      </div>
+      <div style="background:var(--navy2); padding:1.8rem 2rem; border-bottom:1px solid var(--border);">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:0.6rem;">BELL CANADA · FIBER DELIVERY · 2019–2021</div>
+        <p style="color:var(--light); font-size:0.92rem; line-height:1.7;">Delivered 1,000+ GTA fiber circuit implementations and cut client email exchanges by ~70% through portal automation and KPI dashboards.</p>
+      </div>
+      <div style="background:var(--navy2); padding:1.8rem 2rem; border-bottom:1px solid var(--border); border-left:1px solid var(--border);">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:0.6rem;">TELUS · 5G NETWORK SECURITY · 2021–2022</div>
+        <p style="color:var(--light); font-size:0.92rem; line-height:1.7;">Directed full lifecycle deployment of 4G/5G firewalls (Palo Alto, Juniper) and F5 load balancers across EPC/eRAN environments — reducing deployment delays by ~15%.</p>
+      </div>
+      <div style="background:var(--navy2); padding:1.8rem 2rem; border-bottom:1px solid var(--border);">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:0.6rem;">CGI · IT INFRASTRUCTURE PORTFOLIO · 2016–2019</div>
+        <p style="color:var(--light); font-size:0.92rem; line-height:1.7;">Managed $8M+ IT infrastructure portfolio to 100% on-time delivery with 9.9/10 client satisfaction across 60+ concurrent projects.</p>
+      </div>
+      <div style="background:var(--navy2); padding:1.8rem 2rem; border-bottom:1px solid var(--border); border-left:1px solid var(--border);">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:0.6rem;">ROGERS · IN-BUILDING SYSTEMS · 2014–2016</div>
+        <p style="color:var(--light); font-size:0.92rem; line-height:1.7;">Delivered 40+ DAS/IBS deployments across healthcare, commercial, and government sites — managing $100M+ in project value with full HSSE compliance.</p>
+      </div>
+      <div style="background:var(--navy2); padding:1.8rem 2rem; grid-column:1/-1;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:0.6rem;">STC / VIVA KUWAIT · NETWORK LAUNCH · 2008–2012</div>
+        <p style="color:var(--light); font-size:0.92rem; line-height:1.7;">Played a critical role in launching Kuwait's third national mobile network within 10 months — 160+ IBS sites, 130+ macro sites, >99% network KPI performance sustained.</p>
+      </div>
+    </div>
+  </div>
+</section>
+  <div class="section-inner">
+    <div class="vision-grid">
+      <div class="vision-intro">
+        <div class="section-eyebrow">Long-Term Direction</div>
+        <h2 class="section-title">Beyond the <em>Practice</em></h2>
+        <p>Sibai Advisory is building toward applied research in AI governance, cybersecurity resilience, and mission-critical systems. Today, the practice is focused entirely on helping organizations make defensible governance, architecture, and delivery decisions.</p>
+        <p>Longer term, the goal is to contribute to the governance frameworks that regulated industries and critical infrastructure operators will need as AI systems take on autonomous decision-making roles — a gap that does not yet have adequate standards.</p>
+      </div>
+      <div>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-spine"><div class="tl-dot"></div></div>
+            <div class="tl-body">
+              <div class="tl-year">Current Focus</div>
+              <div class="tl-head">Sibai Advisory — Consulting Practice</div>
+              <div class="tl-desc">Cybersecurity governance and readiness, program and transformation delivery, and enterprise architecture advisory for regulated organizations across Canada. Accepting new client engagements.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="section-inner">
+    <div class="contact-grid">
+      <div class="contact-intro">
+        <div class="section-eyebrow">Contact</div>
+        <h2 class="section-title">Start a <em>Conversation</em></h2>
+        <p>Whether you are preparing for a SOC 2 audit, building a cybersecurity programme, or exploring governance challenges in AI and complex systems — Sibai Advisory is ready to engage.</p>
+        <div class="contact-details">
+          <div class="cd-row">
+            <span class="cd-label">Email</span>
+            <span class="cd-val"><a href="mailto:mamoun@sibaiadvisory.com">mamoun@sibaiadvisory.com</a></span>
+          </div>
+          <div class="cd-row">
+            <span class="cd-label">Phone</span>
+            <span class="cd-val"><a href="tel:4168265004">416-826-5004</a></span>
+          </div>
+          <div class="cd-row">
+            <span class="cd-label">LinkedIn</span>
+            <span class="cd-val"><a href="https://www.linkedin.com/in/mamounsibai/" target="_blank">linkedin.com/in/mamounsibai</a></span>
+          </div>
+          <div class="cd-row">
+            <span class="cd-label">Web</span>
+            <span class="cd-val"><a href="https://sibaiadvisory.com">sibaiadvisory.com</a></span>
+          </div>
+          <div class="cd-row">
+            <span class="cd-label">Location</span>
+            <span class="cd-val">Mississauga, Ontario, Canada</span>
+          </div>
+          <div class="cd-row">
+            <span class="cd-label">Serving</span>
+            <span class="cd-val">Canada · Middle East · International</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <form class="contact-form" name="contact" method="POST" data-netlify="true">
+          <input type="hidden" name="form-name" value="contact">
+          <div class="fl">
+            <label>Name</label>
+            <input type="text" name="name" class="fi" placeholder="Your name" required>
+          </div>
+          <div class="fl">
+            <label>Organization</label>
+            <input type="text" name="organization" class="fi" placeholder="Your company or organization">
+          </div>
+          <div class="fl">
+            <label>Email</label>
+            <input type="email" name="email" class="fi" placeholder="your@email.com" required>
+          </div>
+          <div class="fl">
+            <label>Message</label>
+            <textarea name="message" class="ft" placeholder="Briefly describe what you are working on..." required></textarea>
+          </div>
+          <button type="submit" class="fsub">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-brand">Sibai <span>Advisory</span></div>
+  <div class="footer-tag">Where Governance Meets Precision</div>
+  <div class="footer-copy">© 2026 Sibai Advisory · Mississauga, Ontario</div>
+</footer>
+
+</body>
+</html>
