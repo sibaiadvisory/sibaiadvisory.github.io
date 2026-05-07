@@ -347,59 +347,13 @@
     section { padding: 4rem 1.5rem; }
     .hero { padding: 6rem 1.5rem 3rem; }
     .about-grid, .vision-grid, .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
-    .services-grid { grid-template-columns: 1fr !important; }
+    .services-grid { grid-template-columns: 1fr; }
     .svc { border-right: none; }
     .svc:nth-child(n) { border-bottom: 1px solid var(--border); }
     .svc:last-child { border-bottom: none; }
     .hero-creds { display: none; }
     .brands { padding: 1.5rem; }
     footer { flex-direction: column; text-align: center; padding: 1.5rem; }
-
-    /* Outcomes section */
-    #outcomes { padding: 4rem 1.5rem; }
-    #outcomes > div > div[style*="grid-template-columns:1fr 1fr"] {
-      grid-template-columns: 1fr !important;
-    }
-
-    /* Case study section */
-    #casestudy { padding: 4rem 1.5rem; }
-    #casestudy div[style*="grid-template-columns:1fr 1fr 1fr"] {
-      grid-template-columns: 1fr !important;
-    }
-    #casestudy div[style*="border-left:1px solid var(--border)"] {
-      border-left: none !important;
-      border-top: 1px solid var(--border);
-    }
-
-    /* Insights section */
-    #insights { padding: 4rem 1.5rem; }
-    #insights > div > div[style*="grid-template-columns:1fr 1fr"] {
-      grid-template-columns: 1fr !important;
-    }
-
-    /* Vision section */
-    #vision { padding: 4rem 1.5rem; }
-
-    /* Contact booking button */
-    #contact div[style*="margin-top:1.5rem"] a {
-      width: 100%; justify-content: center;
-    }
-
-    /* General inline grid overrides */
-    div[style*="grid-template-columns:1fr 1fr"] {
-      grid-template-columns: 1fr !important;
-    }
-    div[style*="grid-template-columns:1fr 1fr 1fr"] {
-      grid-template-columns: 1fr !important;
-    }
-
-    /* Section padding for inline-styled sections */
-    section[style*="padding:6rem 5rem"] {
-      padding: 4rem 1.5rem !important;
-    }
-    section[style*="padding: 6rem 5rem"] {
-      padding: 4rem 1.5rem !important;
-    }
   }
 </style>
 </head>
@@ -413,6 +367,7 @@
     <li><a href="#outcomes">Outcomes</a></li>
     <li><a href="#casestudy">Case Studies</a></li>
     <li><a href="#insights">Insights</a></li>
+    <li><a href="#vision">Vision</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -571,7 +526,6 @@
     </div>
   </div>
 </section>
-</section>
 
 <!-- CASE STUDIES -->
 <section style="background:var(--navy); padding:6rem 5rem;" id="casestudy">
@@ -651,22 +605,47 @@
   </div>
 </section>
 
+<section class="vision" id="vision">
   <div class="section-inner">
     <div class="vision-grid">
       <div class="vision-intro">
         <div class="section-eyebrow">Long-Term Direction</div>
         <h2 class="section-title">Beyond the <em>Practice</em></h2>
-        <p>Sibai Advisory is building toward applied research in AI governance, cybersecurity resilience, and mission-critical systems. Today, the practice is focused entirely on helping organizations make defensible governance, architecture, and delivery decisions.</p>
-        <p>Longer term, the goal is to contribute to the governance frameworks that regulated industries and critical infrastructure operators will need as AI systems take on autonomous decision-making roles — a gap that does not yet have adequate standards.</p>
+        <p>Sibai Advisory is building toward applied research in AI governance, cybersecurity resilience, and mission-critical systems. Today, the practice is focused on helping organizations make defensible governance, architecture, and delivery decisions in regulated and high-consequence environments.</p>
+        <p>Longer term, the goal is to contribute to applied governance frameworks for AI, cybersecurity, and operational resilience in mission-critical sectors — including regulated infrastructure and future autonomous space mission operations. Existing standards remain fragmented across cybersecurity, AI risk, engineering assurance, and sector-specific regulation. Sibai Advisory aims to help integrate these domains into practical frameworks that executives, operators, and regulators can use.</p>
       </div>
       <div>
         <div class="timeline">
           <div class="tl-item">
-            <div class="tl-spine"><div class="tl-dot"></div></div>
+            <div class="tl-spine"><div class="tl-dot"></div><div class="tl-line"></div></div>
             <div class="tl-body">
               <div class="tl-year">Current Focus</div>
               <div class="tl-head">Sibai Advisory — Consulting Practice</div>
               <div class="tl-desc">Cybersecurity governance and readiness, program and transformation delivery, and enterprise architecture advisory for regulated organizations across Canada and the Middle East. Accepting new client engagements.</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-spine"><div class="tl-dot"></div><div class="tl-line"></div></div>
+            <div class="tl-body">
+              <div class="tl-year">Research Direction</div>
+              <div class="tl-head">AI, Cybersecurity & Mission-Critical Governance</div>
+              <div class="tl-desc">Developing a focused research stream around AI risk, cybersecurity resilience, human-machine decision authority, and operational continuity for critical infrastructure and autonomous systems.</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-spine"><div class="tl-dot"></div><div class="tl-line"></div></div>
+            <div class="tl-body">
+              <div class="tl-year">Doctoral Pathway</div>
+              <div class="tl-head">Applied Framework Development</div>
+              <div class="tl-desc">A future doctoral research path may formalize this work into an integrated governance framework for AI-enabled cybersecurity and operational resilience in mission-critical sectors, including space mission operations.</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-spine"><div class="tl-dot"></div></div>
+            <div class="tl-body">
+              <div class="tl-year">Long-Term Ambition</div>
+              <div class="tl-head">Toward a Research-Led Advisory Platform</div>
+              <div class="tl-desc">The long-term ambition is to evolve Sibai Advisory into a research-informed advisory and policy platform that produces practical frameworks, briefings, and implementation guidance for executives, operators, and regulators.</div>
             </div>
           </div>
         </div>
