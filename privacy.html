@@ -4,74 +4,194 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Privacy Policy | Sibai Advisory</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=IBM+Plex+Sans:wght@300;400;500&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+<meta name="description" content="Privacy Policy for Sibai Advisory, a cybersecurity governance and enterprise advisory practice based in Mississauga, Ontario.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --navy: #080d1a; --navy2: #0d1526; --gold: #c9a84c;
-    --steel: #7a8fa8; --steel2: #9fb3c8; --light: #dce6f0;
-    --white: #f0f5ff; --border: rgba(201,168,76,0.12);
+    --navy: #080d1a;
+    --navy2: #0d1526;
+    --navy3: #162034;
+    --gold: #c9a84c;
+    --gold-light: #e8c97a;
+    --steel: #7a8fa8;
+    --steel2: #9fb3c8;
+    --light: #dce6f0;
+    --white: #f0f5ff;
+    --accent: #3d8fc4;
+    --border: rgba(201,168,76,0.12);
   }
   * { margin:0; padding:0; box-sizing:border-box; }
-  body { background:var(--navy); color:var(--light); font-family:'IBM Plex Sans',sans-serif; font-weight:300; line-height:1.8; }
-  nav {
-    padding:1.1rem 5rem; display:flex; justify-content:space-between; align-items:center;
-    background:rgba(8,13,26,0.95); border-bottom:1px solid var(--border);
+  html { scroll-behavior:smooth; }
+  body {
+    background:var(--navy);
+    color:var(--light);
+    font-family:'IBM Plex Sans',sans-serif;
+    font-weight:300;
+    line-height:1.8;
+    overflow-x:hidden;
   }
-  .nav-logo { font-family:'IBM Plex Sans',sans-serif; font-weight:600; font-size:1rem; letter-spacing:0.2em; color:var(--white); text-decoration:none; text-transform:uppercase; }
+  nav {
+    position:sticky;
+    top:0;
+    z-index:100;
+    padding:1.1rem 5rem;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(8,13,26,0.95);
+    border-bottom:1px solid var(--border);
+    backdrop-filter:blur(8px);
+  }
+  .nav-logo {
+    font-family:'IBM Plex Sans',sans-serif;
+    font-weight:600;
+    font-size:1rem;
+    letter-spacing:0.2em;
+    color:var(--white);
+    text-decoration:none;
+    text-transform:uppercase;
+  }
   .nav-logo span { color:var(--gold); }
-  main { max-width:780px; margin:0 auto; padding:6rem 2rem; }
-  .eyebrow { font-family:'IBM Plex Mono',monospace; font-size:0.68rem; letter-spacing:0.3em; text-transform:uppercase; color:var(--gold); margin-bottom:1rem; }
-  h1 { font-family:'Cormorant Garamond',serif; font-size:2.5rem; font-weight:300; color:var(--white); margin-bottom:0.5rem; }
-  .date { font-family:'IBM Plex Mono',monospace; font-size:0.72rem; color:var(--steel); letter-spacing:0.1em; margin-bottom:3rem; }
-  h2 { font-family:'IBM Plex Sans',sans-serif; font-weight:500; font-size:1rem; color:var(--white); margin:2.5rem 0 0.8rem; text-transform:uppercase; letter-spacing:0.08em; }
-  p { color:var(--steel2); font-size:0.95rem; margin-bottom:1rem; }
+  .nav-link {
+    color:var(--steel);
+    text-decoration:none;
+    font-size:0.72rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    font-weight:500;
+  }
+  .nav-link:hover { color:var(--gold); }
+  main {
+    max-width:860px;
+    margin:0 auto;
+    padding:6rem 2rem;
+  }
+  .eyebrow {
+    font-family:'IBM Plex Mono',monospace;
+    font-size:0.68rem;
+    letter-spacing:0.3em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin-bottom:1rem;
+  }
+  h1 {
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(2.4rem, 7vw, 4rem);
+    line-height:0.95;
+    font-weight:300;
+    color:var(--white);
+    margin-bottom:1rem;
+  }
+  .date {
+    font-family:'IBM Plex Mono',monospace;
+    font-size:0.72rem;
+    color:var(--steel);
+    letter-spacing:0.1em;
+    margin-bottom:3rem;
+    text-transform:uppercase;
+  }
+  .panel {
+    background:linear-gradient(145deg, rgba(22,32,52,0.9), rgba(13,21,38,0.92));
+    border:1px solid var(--border);
+    padding:2.5rem;
+    box-shadow:0 20px 70px rgba(0,0,0,0.18);
+  }
+  h2 {
+    font-family:'IBM Plex Sans',sans-serif;
+    font-weight:600;
+    font-size:0.9rem;
+    color:var(--white);
+    margin:2.5rem 0 0.8rem;
+    text-transform:uppercase;
+    letter-spacing:0.1em;
+  }
+  h2:first-child { margin-top:0; }
+  p, li {
+    color:var(--steel2);
+    font-size:0.95rem;
+    margin-bottom:1rem;
+  }
+  ul { margin:0.3rem 0 1.4rem 1.2rem; }
   a { color:var(--gold); text-decoration:none; }
-  footer { text-align:center; padding:2rem; border-top:1px solid var(--border); font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:var(--steel); }
-  @media(max-width:768px){ nav { padding:1rem 1.5rem; } main { padding:4rem 1.5rem; } }
+  a:hover { color:var(--gold-light); }
+  .note {
+    margin-top:2rem;
+    padding:1.2rem 1.4rem;
+    background:rgba(201,168,76,0.06);
+    border-left:2px solid var(--gold);
+    color:var(--steel2);
+    font-size:0.88rem;
+  }
+  footer {
+    text-align:center;
+    padding:2rem;
+    border-top:1px solid var(--border);
+    font-family:'IBM Plex Mono',monospace;
+    font-size:0.65rem;
+    color:var(--steel);
+  }
+  @media(max-width:768px){
+    nav { padding:1rem 1.5rem; }
+    .nav-logo { font-size:0.85rem; letter-spacing:0.16em; }
+    .nav-link { font-size:0.62rem; }
+    main { padding:4rem 1.1rem; }
+    .panel { padding:1.5rem; }
+    p, li { font-size:0.92rem; }
+  }
 </style>
 </head>
 <body>
 <nav>
   <a href="/" class="nav-logo">Sibai <span>Advisory</span></a>
+  <a href="/" class="nav-link">Back to site</a>
 </nav>
 <main>
   <div class="eyebrow">Legal</div>
   <h1>Privacy Policy</h1>
   <div class="date">Effective Date: May 2026 · Last Updated: May 2026</div>
 
-  <p>Sibai Advisory ("we," "our," or "us") is committed to protecting the privacy of visitors to sibaiadvisory.com. This policy explains what information we collect, how we use it, and your rights regarding that information.</p>
+  <div class="panel">
+    <h2>1. Who We Are</h2>
+    <p>Sibai Advisory is a founder-led cybersecurity governance, SOC 2 readiness, enterprise technology advisory, and program delivery practice based in Mississauga, Ontario, Canada. You can contact us at <a href="mailto:mamoun@sibaiadvisory.com">mamoun@sibaiadvisory.com</a>.</p>
 
-  <h2>1. Who We Are</h2>
-  <p>Sibai Advisory is a cybersecurity governance and program management advisory practice operating in Canada. Our registered business address is Mississauga, Ontario, Canada. You can contact us at <a href="mailto:mamoun@sibaiadvisory.com">mamoun@sibaiadvisory.com</a>.</p>
+    <h2>2. Information We Collect</h2>
+    <p>We collect information you voluntarily provide when you contact us by email or use the contact form on this website. This may include your name, organization name, email address, phone number if provided, and the content of your message.</p>
+    <p>The website does not intentionally use advertising cookies, tracking pixels, or third-party analytics services. The site may load technical resources such as web fonts, and website hosting or email providers may process limited technical information, such as IP address, browser information, timestamps, or delivery metadata, as part of normal website and email operation.</p>
 
-  <h2>2. Information We Collect</h2>
-  <p>We collect information you voluntarily provide when you submit the contact form on our website, including your name, organization name, email address, and the content of your message.</p>
-  <p>We do not use tracking cookies, advertising pixels, or third-party analytics services. We do not collect any information from visitors who browse the site without submitting a form.</p>
+    <h2>3. How We Use Your Information</h2>
+    <p>Information you provide is used to respond to your inquiry, assess whether there is a potential fit for an advisory engagement, schedule discussions, and maintain ordinary business correspondence.</p>
+    <p>We do not use your contact information for unrelated marketing campaigns, and we do not add you to a mailing list without your consent.</p>
 
-  <h2>3. How We Use Your Information</h2>
-  <p>Information submitted through our contact form is used solely to respond to your inquiry and to determine whether there is a fit for an engagement. We do not use your contact information for marketing purposes, and we do not add you to any mailing list without your explicit consent.</p>
+    <h2>4. Contact Form and Email Handling</h2>
+    <p>The contact form on this website is configured to open your email client and send your message to Sibai Advisory. This means your message may be processed by your own email provider and by Sibai Advisory's email service provider for transmission and delivery purposes.</p>
+    <p>We retain correspondence for a reasonable period for business record, follow-up, and engagement-management purposes. We do not sell personal information or store visitor information in advertising platforms or third-party marketing databases.</p>
 
-  <h2>4. How We Store Your Information</h2>
-  <p>Contact form submissions are processed through Netlify Forms and delivered to our business email. We retain correspondence for a reasonable period for business record purposes. We do not store personal data in third-party CRM systems or databases.</p>
+    <h2>5. Disclosure to Third Parties</h2>
+    <p>We do not sell, rent, or trade personal information. We may disclose information only when necessary to respond to your request, support ordinary business operations, work with professional advisors, comply with applicable law, or respond to a valid legal request.</p>
 
-  <h2>5. Disclosure to Third Parties</h2>
-  <p>We do not sell, rent, or share your personal information with third parties for commercial purposes. We may disclose information if required by law or in response to a valid legal request from a government authority.</p>
+    <h2>6. Your Privacy Rights</h2>
+    <p>Depending on your location and applicable privacy law, you may have the right to request access to personal information we hold about you, request correction of inaccurate information, or withdraw consent for certain uses of your information.</p>
+    <p>For Canadian residents, Canada’s Personal Information Protection and Electronic Documents Act (PIPEDA) provides individuals with rights related to access and correction of personal information held by private-sector organizations in the course of commercial activity.</p>
+    <p>To make a privacy-related request, contact <a href="mailto:mamoun@sibaiadvisory.com">mamoun@sibaiadvisory.com</a>.</p>
 
-  <h2>6. Your Rights (Canadian Residents)</h2>
-  <p>Under Canada's Personal Information Protection and Electronic Documents Act (PIPEDA), you have the right to access the personal information we hold about you, request corrections, and withdraw consent for its use. To exercise these rights, contact us at <a href="mailto:mamoun@sibaiadvisory.com">mamoun@sibaiadvisory.com</a>.</p>
+    <h2>7. Security</h2>
+    <p>We use reasonable administrative and technical safeguards appropriate to the nature of the information received. However, no website, email system, or internet transmission method is completely secure. Please avoid sending highly sensitive confidential information through the contact form or unsecured email unless an appropriate confidentiality arrangement is in place.</p>
 
-  <h2>7. Links to Other Websites</h2>
-  <p>Our website contains links to LinkedIn and other external sites. We are not responsible for the privacy practices of those sites and encourage you to review their privacy policies.</p>
+    <h2>8. External Links</h2>
+    <p>This website may link to external sites, including LinkedIn or other professional resources. Sibai Advisory is not responsible for the privacy practices, security, or content of external websites.</p>
 
-  <h2>8. Changes to This Policy</h2>
-  <p>We may update this privacy policy from time to time. Changes will be posted on this page with an updated effective date. Continued use of the site after changes constitutes acceptance of the updated policy.</p>
+    <h2>9. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. Updates will be posted on this page with a revised effective or last-updated date.</p>
 
-  <h2>9. Contact</h2>
-  <p>For any privacy-related questions or concerns, please contact:<br>
-  Mamoun Sibai — Sibai Advisory<br>
-  <a href="mailto:mamoun@sibaiadvisory.com">mamoun@sibaiadvisory.com</a><br>
-  Mississauga, Ontario, Canada</p>
+    <h2>10. Contact</h2>
+    <p>For privacy-related questions or requests, contact:<br>
+    Mamoun Sibai — Sibai Advisory<br>
+    <a href="mailto:mamoun@sibaiadvisory.com">mamoun@sibaiadvisory.com</a><br>
+    Mississauga, Ontario, Canada</p>
+
+    <div class="note">This policy is provided for general website transparency and should not be interpreted as legal advice. Sibai Advisory may update the policy as the website, contact methods, or business operations evolve.</div>
+  </div>
 </main>
-<footer>© 2026 Sibai Advisory · Mississauga, Ontario · <a href="/" style="color:var(--gold);">sibaiadvisory.com</a></footer>
+<footer>© 2026 Sibai Advisory · Mississauga, Ontario · <a href="/">sibaiadvisory.com</a></footer>
 </body>
 </html>
