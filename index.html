@@ -103,6 +103,15 @@
     max-width: 560px; margin-bottom: 3rem; line-height: 1.85;
     font-weight: 300;
   }
+.hero-proof {
+margin-bottom: 2rem;
+color: var(--gold);
+font-family: 'IBM Plex Mono', monospace;
+font-size: 0.72rem;
+letter-spacing: 0.08em;
+line-height: 1.8;
+text-transform: uppercase;
+}
   .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
   .btn-primary {
     display: inline-flex; align-items: center; gap: 0.6rem;
@@ -299,32 +308,6 @@
   .outcome-kicker { font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:0.6rem; text-transform:uppercase; }
   .outcome-card p { color:var(--light); font-size:0.92rem; line-height:1.7; }
 
-  /* CASE STUDIES */
-  .case { background: var(--navy); }
-  .case-card { margin-top:3rem; border:1px solid var(--border); background:var(--navy2); }
-  .case-head { padding:2rem 2.5rem; border-bottom:1px solid var(--border); display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:1rem; }
-  .case-kicker { font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:var(--gold); letter-spacing:0.2em; text-transform:uppercase; margin-bottom:0.5rem; }
-  .case-title { font-family:'Cormorant Garamond',serif; font-size:1.4rem; font-weight:300; color:var(--white); }
-  .case-meta { font-family:'IBM Plex Mono',monospace; font-size:0.62rem; color:var(--steel); letter-spacing:0.12em; text-transform:uppercase; }
-  .case-body { display:grid; grid-template-columns:1fr 1fr 1fr; gap:1px; background:var(--border); }
-  .case-section { background:var(--navy2); padding:2rem 2.2rem; }
-  .case-section h3 { font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:var(--gold); letter-spacing:0.18em; text-transform:uppercase; margin-bottom:1rem; }
-  .case-section p { color:var(--steel2); font-size:0.88rem; line-height:1.8; }
-  .case-metrics { display:grid; grid-template-columns:repeat(4, 1fr); gap:1px; background:var(--border); border-top:1px solid var(--border); }
-  .metric { background:var(--navy2); padding:1.5rem 1.2rem; text-align:center; }
-  .metric-num { font-family:'Cormorant Garamond',serif; font-size:2rem; color:var(--white); line-height:1; margin-bottom:0.4rem; }
-  .metric-label { font-family:'IBM Plex Mono',monospace; font-size:0.62rem; color:var(--steel); letter-spacing:0.08em; text-transform:uppercase; line-height:1.4; }
-  .privacy-note { padding:1.2rem 2rem; color:var(--steel); font-size:0.78rem; font-style:italic; border-top:1px solid var(--border); }
-
-  /* INSIGHTS */
-  .insights { background: var(--navy2); }
-  .insights-grid { display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--border); margin-top:3rem; border:1px solid var(--border); }
-  .insight-card { background:var(--navy2); padding:2.2rem; }
-  .insight-label { font-family:'IBM Plex Mono',monospace; font-size:0.62rem; color:var(--gold); letter-spacing:0.18em; text-transform:uppercase; margin-bottom:0.8rem; }
-  .insight-card h3 { font-family:'Cormorant Garamond',serif; color:var(--white); font-size:1.35rem; font-weight:600; line-height:1.3; margin-bottom:1rem; }
-  .insight-card p, .insight-card li { color:var(--steel2); font-size:0.88rem; line-height:1.8; }
-  .insight-card ol { margin-left:1.2rem; margin-top:1rem; }
-  .insight-card li { margin-bottom:0.7rem; padding-left:0.2rem; }
 
   /* APPROACH */
   .approach {
@@ -412,15 +395,17 @@
     h1.hero-title { font-size: clamp(3rem, 15vw, 4.8rem); line-height: 1; }
     .hero-sub, .section-lead { font-size: 0.98rem; }
     .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
-    .services-grid, .who-grid, .outcomes-grid, .case-body, .case-metrics, .insights-grid, .approach-grid { grid-template-columns: 1fr; }
+    .services-grid, .who-grid, .outcomes-grid, .approach-grid { grid-template-columns: 1fr; }
     .svc { border-right: none; border-bottom: 1px solid var(--border); }
-    .svc:nth-child(3n) { border-right: none; }
-    .svc:last-child { border-bottom: none; }
+    .svc:last-child {
+border-right: none;
+border-bottom: none;
+}
     .hero-creds { display: none; }
     .brands { padding: 1.5rem; }
     .brand-list { gap: 1rem 1.5rem; }
     .about-stats { grid-template-columns: 1fr 1fr; }
-    .case-head, .case-section, .insight-card, .approach-card, .who-card, .outcome-card { padding: 1.5rem; }
+    .approach-card, .who-card, .outcome-card { padding: 1.5rem; }
     .outcome-card.full { grid-column:auto; }
     .contact-details .cd-row { flex-direction: column; gap: 0.25rem; }
     .fsub, .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
@@ -573,6 +558,9 @@
     <p class="hero-sub">
       Founder-led advisory helping organizations structure, govern, and deliver complex technology, cybersecurity, and transformation initiatives. Backed by more than 20 years of leadership experience across telecommunications, enterprise technology, consulting, and regulated environments throughout Canada and the Middle East.
     </p>
+<div class="hero-proof">
+20+ Years Enterprise Leadership • Bell • TELUS • Rogers • CGI • Federal Government • P.Eng • MBA • PMP
+</div>
     <div class="hero-actions">
       <a href="#services" class="btn-primary">View Advisory Services</a>
       <a href="#contact" class="btn-secondary">Start a Conversation</a>
@@ -591,7 +579,7 @@
 
 <div class="brands">
   <div class="brands-inner">
-    <span class="brands-label">Career Background</span>
+    <span class="brands-label">Leadership Experience Across</span>
     <div class="brand-list">
       <span class="brand-name">Regulated Federal Environment</span>
       <span class="brand-name">Bell Canada</span>
